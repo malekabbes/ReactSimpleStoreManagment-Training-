@@ -22,7 +22,6 @@ class Products extends Component {
   componentWillUnmount() {
     clearTimeout(this.timer);
   }
-
   render() {
     return (
       <div>
