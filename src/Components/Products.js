@@ -12,6 +12,17 @@ class Products extends Component {
   Buy = (prod) => {
     if (prod.quantity === 0) {
       this.setState({ available: false });
+      //   else if(prod.quantity>0){
+      //     this.setState((prevState)=>({
+      //      product_count:prevState.product_count-1
+      //     }));
+    }
+  };
+    HandleQuantity = (prod) => {
+    if (prod.quantity > 0) {
+      this.setState((prevState) => ({
+        product_count: prevState.product_count - 1,
+      }));
     }
   };
   componentDidMount() {

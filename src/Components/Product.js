@@ -6,6 +6,7 @@ class Product extends Component {
   state = {
     count: this.props.product.like,
     showAlert: false,
+    product_count: this.props.product.quantity,
   };
   handleLike = () => {
     console.log(this.state.count);
@@ -13,6 +14,13 @@ class Product extends Component {
       ...prevState,
       count: prevState.count + 1,
     }));
+  };
+  HandleQuantity = () => {
+    if (this.state.product_count > 0) {
+      this.setState((prevState) => ({
+        product_count: prevState.product_count - 1,
+      }));
+    }
   };
   ShowAlert = () => {
     this.setState({ showAlert: true });
@@ -41,7 +49,7 @@ class Product extends Component {
               <Badge bg="warning" text="dark">
                 Quantity:
               </Badge>
-              &nbsp;{this.props.product.quantity}
+              &nbsp;{this.state.product_count}
             </Card.Text>
             <Card.Text>
               <Badge bg="warning" text="dark">
@@ -55,6 +63,8 @@ class Product extends Component {
             <Button
               variant="primary"
               onClick={() => {
+                this.HandleQuantity(this.props.product);
+
                 this.props.buy(this.props.product);
                 this.ShowAlert();
               }}
