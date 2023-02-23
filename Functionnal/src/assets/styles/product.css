@@ -1,10 +1,28 @@
 .bestProduct {
-    background-color:#DB7090;
-    animation: clignote 2s linear infinite;
-   }
-   @keyframes clignote {
-      50% { opacity:0.5;}
-   }
-   .product_count{
-    margin-bottom: 2rem;
-   }
+  background-color: #db7090;
+  animation: clignote 2s linear infinite;
+}
+@keyframes clignote {
+  50% {
+    opacity: 0.5;
+  }
+}
+.product_count {
+  margin-bottom: 2rem;
+}
+
+.notfound {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/notfound.jfif") no-repeat;
+}
+.active {
+  text-decoration: underline;
+}
+.product_detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
