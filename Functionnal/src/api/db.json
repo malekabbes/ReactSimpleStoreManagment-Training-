@@ -4,7 +4,7 @@
       "id": 1,
       "name": "PC Lenovo",
       "price": "1400",
-      "img": "product1.webp",
+      "img": "product1.png",
       "like": 0,
       "quantity": 10,
       "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"
@@ -16,6 +16,15 @@
       "img": "product2.jpg",
       "like": 0,
       "quantity": 0,
+      "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"
+    },
+    {
+      "id": 3,
+      "name": "KeyBoard",
+      "price": "70",
+      "img": "product3.jpg",
+      "like": 0,
+      "quantity": 20,
       "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"
     }
   ]

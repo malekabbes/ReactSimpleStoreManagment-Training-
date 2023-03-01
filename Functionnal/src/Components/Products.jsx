@@ -26,7 +26,7 @@ const ProductsComponent = () => {
   };
   useEffect(() => {
     load_products();
-  });
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {

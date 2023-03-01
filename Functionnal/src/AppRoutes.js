@@ -12,9 +12,9 @@ const AppRoutes = () => {
         <Routes>
           <Route exact path="/products" element={<ProductsComponent />} />
           <Route path="/test" element={<ProductsComponent />} />
-          <Route path="/products/:name" element={<ProductDetails />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
 
-          <Route path="*" element={<NotFound />} /> 
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </div>
