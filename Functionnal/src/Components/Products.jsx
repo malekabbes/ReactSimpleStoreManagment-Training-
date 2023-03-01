@@ -4,11 +4,12 @@ import products from "../mock/Project";
 import ProductComponent from "./Product";
 import "../assets/styles/product.css";
 import NavbarComponent from "./NavbarComponent";
+import { getallProducts } from "../service/api";
 
 const ProductsComponent = () => {
   const [_available, Setavailable] = useState(true);
   const [welcome_msg, Setwelcome_msg] = useState(false);
-  const [listproducts, _Setlistproducts] = useState(products);
+  const [listproducts, setlistproducts] = useState(products);
   const test = {
     test: "test",
   };
@@ -18,6 +19,15 @@ const ProductsComponent = () => {
       Setavailable(false);
     }
   };
+  const load_products = async () => {
+    const response = await getallProducts();
+    console.log("response", response.data);
+    setlistproducts(response.data);
+  };
+  useEffect(() => {
+    load_products();
+  });
+
   useEffect(() => {
     const timer = setTimeout(() => {
       Setwelcome_msg(true);

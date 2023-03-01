@@ -7,7 +7,7 @@ import { useState } from "react";
 const ProductDetails = () => {
   const [listproducts, _Setlistproducts] = useState(products);
   const { name } = useParams();
-  const ProductDetails = listproducts.find((p) => p.name === name);
+  // const ProductDetails = listproducts.find((p) => p.name === name);
 
   console.log(ProductDetails);
 
